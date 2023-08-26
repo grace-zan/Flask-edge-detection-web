@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Edge Detection</title>
+  <link href="../static/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="header">
+  <a class="active" href="/">Edge Detection</a>>
+  <a class="ac" href="/about">About</a>
+  <a class="ac" href="/convert">Convert</a>
+  <br><br>
+  </div>
+  
+  <p>Edge detection is a type of program that will take an image and define and outline its edges. Below are examples of the detection types.</p>
+
+  <div class="responsive">
+    <br><br>
+    <div class="gallery">
+      <a target="_blank" href="../static/moth.jpg">
+        <img src="../static/moth.jpg" alt="loading moth" width="252" height="142">
+      </a>
+      <div class="desc">Original Image</div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <br><br>
+    <div class="gallery">
+      <a target="_blank" href="../static/Contourmoth.jpg">
+        <img src="../static/Contourmoth.jpg" alt="loading Contour" width="252" height="142">
+      </a>
+      <div class="desc">Contour</div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <br><br>
+    <div class="gallery">
+      <a target="_blank" href="../static/Cannymoth.jpg">
+        <img src="../static/Cannymoth.jpg" alt="loading canny" width="252" height="142">
+      </a>
+      <div class="desc">Canny</div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <br><br>
+    <div class="gallery">
+      <a target="_blank" href="../static/Sobelmoth.jpg">
+        <img src="../static/Sobelmoth.jpg" alt="loading sobel" width="252" height="142">
+      </a>
+      <div class="desc">Sobel</div>
+    </div>
+    <br><br>
+  </div>
+
+
+
+  <div class="form">
+  <p>Keep in mind that results may vary depending on the photo. High quality photos are recommended.</p>
+  <form method="POST" action="/uploads" enctype="multipart/form-data">
+    <label for="filepicker">Your Image:</label><br><br>
+    <input type="file" id="filepicker"name="photo"><br><br>
+    <label for="Detectionoption">Detection Type:</label><br><br>
+    <select id="Detectionoption" name="Detection Option">
+      <option value="Contour">Contour</option>
+      <option value="Canny">Canny</option>
+      <option value="Sobel">Sobel</option>
+    </select><br><br>
+    <input type= "submit" value="Upload">
+  </form>
+  </div>
+</body>
+
+</html>
